@@ -33,10 +33,12 @@ public class Time {
 	
 	public void addVitoria() {
 		this.pontos = this.pontos + 3;
+		vitorias++;
 	}
 	
 	public void addEmpate() {
 		this.pontos++;
+		empates++;
 	}
 	
 	public void addPartidasJogadas() {
@@ -100,9 +102,19 @@ public class Time {
 	public void setGolsSofridos(int golsSofridos) {
 		this.golsSofridos = golsSofridos;
 	}
+
+	public void addGolsMarcados(int golsCasa) {
+		this.golsMarcados = this.golsMarcados + golsCasa;
+	}
+
+	public void addGolsSofridos(int golsVisitante) {
+		this.golsSofridos = this.golsSofridos + golsVisitante; 
+	}
 	
 	
-	
+	public String toString() {
+		return nome + "\t" + pontos + "\t" + getSaldoGols() + "\t" + vitorias; 
+	}
 	
 	
 

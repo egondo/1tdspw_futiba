@@ -30,6 +30,13 @@ public class Partida {
 		casa.addPartidasJogadas();
 		visitante.addPartidasJogadas();
 		
+		casa.addGolsMarcados(golsCasa);
+		casa.addGolsSofridos(golsVisitante);
+		
+		visitante.addGolsMarcados(golsVisitante);
+		visitante.addGolsSofridos(golsCasa);
+			
+		
 		if (golsCasa > golsVisitante) {
 			casa.addVitoria();			
 		}
